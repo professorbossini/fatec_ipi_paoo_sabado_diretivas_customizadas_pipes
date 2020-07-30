@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'fatec-ipi-sabado-diretivas-customizadas-pipes';
+  lembretes: Array<string> = [];
+  lembrete: string;
+
+  variavelSombra: string = "10px 10px yellow";
+
+  salvar(): void {
+    this.lembretes = [this.lembrete, ...this.lembretes];
+    this.lembrete = "";
+  }
 }
